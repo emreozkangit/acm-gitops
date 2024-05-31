@@ -34,8 +34,8 @@ spec:
     spec:
       source:
         pvc:
-          name: fedora-base
-          namespace: demo-vm-appset
+          name: fedora
+          namespace: test
       storage:
         resources:
           requests:
