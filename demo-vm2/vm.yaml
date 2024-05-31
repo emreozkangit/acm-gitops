@@ -17,7 +17,7 @@ spec:
         sourceRef:
           kind: DataSource
           name: fedora
-          namespace: openshift-virtualization-os-images
+          namespace: test
         storage:
           resources:
             requests:
@@ -66,7 +66,7 @@ spec:
         memory:
           guest: 2Gi
         resources: {}
-        networks:
+      networks:
           - name: default
             pod: {}
       terminationGracePeriodSeconds: 180
