@@ -17,7 +17,7 @@ spec:
         sourceRef:
           kind: DataSource
           name: fedora
-          namespace: test
+          namespace: openshift-virtualization-os-images
         storage:
           resources:
             requests:
