@@ -33,6 +33,9 @@ spec:
         kubevirt.io/domain: fedora-demo-vm
         kubevirt.io/size: small
     spec:
+      networks:
+          - name: default
+            pod: {}
       architecture: amd64
       domain:
         cpu:
@@ -66,9 +69,6 @@ spec:
         memory:
           guest: 2Gi
         resources: {}
-      networks:
-          - name: default
-            pod: {}
       terminationGracePeriodSeconds: 180
       volumes:
         - dataVolume:
