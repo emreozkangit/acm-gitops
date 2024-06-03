@@ -15,12 +15,12 @@ spec:
       spec:
         sourceRef:
           kind: DataSource
-          name: rhel7-cyan-pinniped-31
-          namespace: fedoratest4
+          name: fedora
+          namespace: openshift-virtualization-os-images
         storage:
           resources:
             requests:
-              storage: 13Gi
+              storage: 30Gi
   runStrategy: RerunOnFailure
   template:
     metadata:
