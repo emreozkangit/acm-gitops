@@ -1,9 +1,9 @@
 apiVersion: kubevirt.io/v1
 kind: VirtualMachine
 metadata:
-  name: fedora-demo-vm1
+  name: fedora-demo-vm
   labels:
-    app: fedora-demo-vm1
+    app: fedora-demo-vm
   annotations:
     argocd.argoproj.io/sync-wave: "99"
 spec:
@@ -11,7 +11,7 @@ spec:
     - apiVersion: cdi.kubevirt.io/v1beta1
       kind: DataVolume
       metadata:
-        name: fedora-demo-vm1
+        name: fedora-demo-vm
       spec:
         sourceRef:
           kind: DataSource
@@ -29,7 +29,7 @@ spec:
         vm.kubevirt.io/os: fedora
         vm.kubevirt.io/workload: server
       labels:
-        kubevirt.io/domain: fedora-demo-vm1
+        kubevirt.io/domain: fedora-demo-vm
         kubevirt.io/size: small
     spec:
       networks:
@@ -70,7 +70,7 @@ spec:
       terminationGracePeriodSeconds: 180
       volumes:
         - dataVolume:
-            name: fedora-demo-vm1
+            name: fedora-demo-vm
           name: rootdisk
         - cloudInitConfigDrive:
             userData: |
