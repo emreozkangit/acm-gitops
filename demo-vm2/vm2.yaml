@@ -32,6 +32,7 @@ spec:
       labels:
         kubevirt.io/domain: fedora-demo-vm1
         kubevirt.io/size: small
+        app2: httpd
     spec:
       networks:
           - name: default
