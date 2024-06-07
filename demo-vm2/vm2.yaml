@@ -4,6 +4,7 @@ metadata:
   name: fedora-demo-vm1
   labels:
     app: fedora-demo-vm1
+    app2: httpd
   annotations:
     argocd.argoproj.io/sync-wave: "99"
 spec:
